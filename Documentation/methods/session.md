@@ -1,7 +1,8 @@
 # session
+**Note**: This method is deprecated and will be removed at a later date.
 
 ## Description
-Returns session information for given player
+Returns session information for given player.
 
 ## Parameters
 - key
@@ -10,8 +11,8 @@ Returns session information for given player
 ## Example Response
 ```php
 {
-    gameType: "", // GameType string
-    server: "mini32F", // server name
-    players: [] // Set of not dashed uuids
+    "gameType": "", // GameType string
+    "server": "mini32F", // server name
+    "players": [] // Set of not dashed uuids
 }
 ```

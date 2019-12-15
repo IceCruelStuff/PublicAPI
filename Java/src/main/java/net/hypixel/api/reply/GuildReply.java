@@ -34,11 +34,6 @@ public class GuildReply extends AbstractReply {
         private ZonedDateTime created;
         private Boolean joinable;
         private long exp;
-        private int memberSizeLevel;
-        private int bankSizeLevel;
-        private Boolean canTag;
-        private Boolean canParty;
-        private Boolean canMotd;
         private int legacyRanking;
 
         public String get_id() {
@@ -89,26 +84,6 @@ public class GuildReply extends AbstractReply {
             return exp;
         }
 
-        public int getMemberSizeLevel() {
-            return memberSizeLevel;
-        }
-
-        public int getBankSizeLevel() {
-            return bankSizeLevel;
-        }
-
-        public Boolean getCanTag() {
-            return canTag;
-        }
-
-        public Boolean getCanParty() {
-            return canParty;
-        }
-
-        public Boolean getCanMotd() {
-            return canMotd;
-        }
-
         public int getLegacyRanking() {
             return legacyRanking;
         }
@@ -128,29 +103,20 @@ public class GuildReply extends AbstractReply {
                     ", created=" + created +
                     ", joinable=" + joinable +
                     ", exp=" + exp +
-                    ", memberSizeLevel=" + memberSizeLevel +
-                    ", bankSizeLevel=" + bankSizeLevel +
-                    ", canTag=" + canTag +
-                    ", canParty=" + canParty +
-                    ", canMotd=" + canMotd +
                     ", legacyRanking=" + legacyRanking +
                     '}';
         }
 
-        public enum GuildRank {
-            GUILDMASTER, OFFICER, MEMBER
-        }
-
         public class Member {
             private UUID uuid;
-            private GuildRank rank;
+            private String rank;
             private ZonedDateTime joined;
 
             public UUID getUuid() {
                 return uuid;
             }
 
-            public GuildRank getRank() {
+            public String getRank() {
                 return rank;
             }
 
